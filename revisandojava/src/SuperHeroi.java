@@ -2,9 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SuperHeroi extends Personagem {
+    private String nomeDeGuerra;
     public void getIdentidadeSecreta() {
         System.out.println("\"??? (identidade protegida)\"");
     }
+
 
 
     public String revelarIdentidade(){
