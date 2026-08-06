@@ -15,6 +15,13 @@ public class Vilao extends Personagem {
 
     @Override
     public String apresentar() {
+        System.out.println("Prazer, vilão");
         return "prazer, vilao";
+    }
+    @Override
+    public void agir(){
+        if (nivelDeAmeaca >5){
+            System.out.println(super.getNome() + " Atacando!!");
+        }
     }
 }

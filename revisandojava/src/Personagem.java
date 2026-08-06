@@ -47,4 +47,9 @@ public abstract class Personagem {
         }
 
     }
+
+    @Override
+    public String toString(){
+        return this.nome;
+    }
 }
