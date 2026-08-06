@@ -3,9 +3,12 @@ import java.util.List;
 
 public class SuperHeroi extends Personagem {
     public void getIdentidadeSecreta() {
-        System.out.println("\"??? (identidade protegida)\"");
+        if (identidadeSecreta == true) {
+            System.out.println("\"??? (identidade protegida)\"");
+        } else {
+            revelarIdentidade();
+        }
     }
-
 
     public String revelarIdentidade(){
         return getNome();
@@ -30,13 +33,17 @@ public class SuperHeroi extends Personagem {
 
     @Override
     public String apresentar() {
-    return "texto";
+    return "prazer";
     }
 
     public void mostrar(){
         System.out.println(super.getNome() + " - " + super.getSexo().getDescricao() + " - " + super.getAltura());
-        for (int i = 0; i < getHabilidades().size(); i++) {
-            System.out.println(habilidades.get(i));
+
+//        for (int i = 0; i < getHabilidades().size(); i++) {
+//            System.out.println(habilidades.get(i));
+//        }
+        for (String hab : habilidades) {
+            System.out.println(hab);
         }
 }
 }
