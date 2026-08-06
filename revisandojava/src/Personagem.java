@@ -11,7 +11,11 @@ public abstract class Personagem {
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        if (nome.equals("")) {
+            throw new IllegalArgumentException("Nome não pode estar vaziu");
+        }else {
+            this.nome = nome;
+        }
     }
 
     public Sexo getSexo() {
@@ -27,8 +31,10 @@ public abstract class Personagem {
     }
 
     public void setAltura(double altura) {
-        if (altura > 0){
+        if (altura > 0.5 && altura < 3.00) {
             this.altura = altura;
+        } else {
+            throw new IllegalArgumentException("Altura invalida");
         }
 
     }
