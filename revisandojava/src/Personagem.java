@@ -2,7 +2,16 @@ public abstract class Personagem {
     private String nome;
     private Sexo sexo;
     private double altura;
-
+    public abstract void agir();
+    public Personagem(String nome, Sexo sexo, double altura){
+        this.nome = nome;
+        this.sexo = sexo;
+        if (altura > 0.5 && altura < 3.00) {
+            this.altura = altura;
+        } else {
+            throw new IllegalArgumentException("Altura invalida");
+        }
+    }
 
     public abstract String apresentar();
 

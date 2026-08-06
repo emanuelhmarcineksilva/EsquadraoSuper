@@ -2,6 +2,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SuperHeroi extends Personagem {
+
+    public SuperHeroi(String nome, Sexo sexo, double altura, boolean identidadeSecreta, ArrayList<String> habilidades){
+        super(nome,sexo,altura);
+        this.identidadeSecreta = identidadeSecreta;
+        this.habilidades = habilidades;
+    }
+
+
+
     public void getIdentidadeSecreta() {
         if (identidadeSecreta == true) {
             System.out.println("\"??? (identidade protegida)\"");
