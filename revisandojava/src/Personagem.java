@@ -1,7 +1,7 @@
 public abstract class Personagem {
-    public String nome;
-    public Sexo sexo;
-    public double altura;
+    private String nome;
+    private Sexo sexo;
+    private double altura;
 
 
     public abstract String apresentar();
@@ -27,6 +27,9 @@ public abstract class Personagem {
     }
 
     public void setAltura(double altura) {
-        this.altura = altura;
+        if (altura > 0){
+            this.altura = altura;
+        }
+
     }
 }
