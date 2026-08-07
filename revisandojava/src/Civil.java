@@ -20,6 +20,6 @@ public class Civil extends Personagem{
 
     @Override
     public void agir() {
-
+        System.out.println("Estão o Civil " + getNome() + " fala: aaa, ele é muito forte, eu como " + getProfissao() + " nada posso fazer!");
     }
 }

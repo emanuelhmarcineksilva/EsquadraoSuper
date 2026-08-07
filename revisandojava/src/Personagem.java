@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public abstract class Personagem {
     private String nome;
     private Sexo sexo;
@@ -52,6 +54,8 @@ public abstract class Personagem {
     public String toString() {
         return "Com grandes poderes vem grandes responsabilidades!";
     }
+
+
 
 
 }
