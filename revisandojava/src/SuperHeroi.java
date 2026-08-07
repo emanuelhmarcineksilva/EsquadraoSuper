@@ -3,10 +3,8 @@ import java.util.List;
 
 public class SuperHeroi extends Personagem {
 
-    public SuperHeroi(String nome, Sexo sexo, double altura, boolean identidadeSecreta, ArrayList<String> habilidades){
+    public SuperHeroi(String nome, Sexo sexo, double altura){
         super(nome,sexo,altura);
-        this.identidadeSecreta = identidadeSecreta;
-        this.habilidades = habilidades;
     }
 
 
@@ -42,7 +40,7 @@ public class SuperHeroi extends Personagem {
 
     @Override
     public String apresentar() {
-    return "prazer";
+        return "Sou Heroi meu nome é: " + getNome() + " tenho " + getAltura() + " e minha abilidade principal é " + getHabilidades().getFirst();
     }
 
     public void mostrar(){
@@ -55,4 +53,9 @@ public class SuperHeroi extends Personagem {
             System.out.println(hab);
         }
 }
+
+    @Override
+    public void agir() {
+
+    }
 }

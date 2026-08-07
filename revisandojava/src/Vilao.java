@@ -17,4 +17,9 @@ public class Vilao extends Personagem {
     public String apresentar() {
         return "prazer, vilao";
     }
+
+    @Override
+    public void agir() {
+
+    }
 }
