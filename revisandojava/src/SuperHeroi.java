@@ -40,7 +40,8 @@ public class SuperHeroi extends Personagem {
 
     @Override
     public String apresentar() {
-        return "Sou Heroi meu nome é: " + getNome() + " tenho " + getAltura() + " e minha abilidade principal é " + getHabilidades().getFirst();
+        System.out.println("Sou Heroi meu nome é: " + getNome() + " tenho " + getAltura() + " e minha abilidade principal é " + getHabilidades().getFirst());
+        return "Foi apresentado";
     }
 
     public void mostrar(){
@@ -56,6 +57,23 @@ public class SuperHeroi extends Personagem {
 
     @Override
     public void agir() {
+        System.out.println("Estão o Super Heroi " + getNome() + " Usuou seu poder de " + getHabilidades().getLast() + " e atacou o inimigo!");
+    }
 
+
+    public void usarHabilidade() {
+        System.out.println("Então o heroi " + getNome() + " usa " + getHabilidades().get(2));
+    }
+
+    public void usarHabilidade(int indice) {
+        if (indice < getHabilidades().size()) {
+            System.out.println("Então o heroi " + getNome() + " usa " + getHabilidades().get(indice));
+        } else {
+            System.out.println("Habilidade não funcionou");
+        }
+    }
+
+    public void usarHabilidade(String nome) {
+        System.out.println("Então o heroi " + getNome() + " usa " + nome);
     }
 }

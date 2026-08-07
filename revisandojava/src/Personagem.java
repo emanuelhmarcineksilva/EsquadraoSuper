@@ -2,7 +2,6 @@ public abstract class Personagem {
     private String nome;
     private Sexo sexo;
     private double altura;
-    public abstract void agir();
     public Personagem(String nome, Sexo sexo, double altura){
         this.nome = nome;
         this.sexo = sexo;
@@ -14,6 +13,8 @@ public abstract class Personagem {
     }
 
     public abstract String apresentar();
+
+    public abstract void agir();
 
     public String getNome() {
         return nome;
@@ -47,4 +48,10 @@ public abstract class Personagem {
         }
 
     }
+
+    public String toString() {
+        return "Com grandes poderes vem grandes responsabilidades!";
+    }
+
+
 }
